@@ -18,13 +18,13 @@
 // }
 
 function validar() {
-    var nombre, apellidos, correo, usuario, clave, telefono, expresion;
-    nombre = document.getElementById("nombre").value;
-    apellidos = document.getElementById("apellidos").value;
-    correo = document.getElementById("correo").value;
-    usuario = document.getElementById("usuario").value;
-    clave = document.getElementById("pass").value;
-    telefono = document.getElementById("telefono").value;
+  var nombre, apellidos, correo, usuario, clave, telefono, expresion;
+  nombre = document.getElementById("nombre").value;
+  apellidos = document.getElementById("apellidos").value;
+  correo = document.getElementById("correo").value;
+  usuario = document.getElementById("usuario").value;
+  clave = document.getElementById("pass").value;
+  telefono = document.getElementById("telefono").value;
 
   console.log(nombre);
   console.log(apellidos);
@@ -61,6 +61,10 @@ function validar() {
     // validación largo correo
     alert("El correo es muy largo");
     return false;
+  } else if (correo.length < 15) {
+    // validación largo correo
+    alert("El correo es muy corto");
+    return false;
   } else if (usuario.length > 20) {
     // validación largo usuario
     alert("El usuario es muy largo");
@@ -80,5 +84,3 @@ function validar() {
     );
   }
 }
-
-
